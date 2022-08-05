@@ -1,0 +1,12 @@
+--- # software installation
+- become: yes
+  hosts: webservers
+  user: ansible
+  connection: ssh
+
+
+  tasks:
+    - name: installing pkg
+      yum:
+        name: docker
+        state: present

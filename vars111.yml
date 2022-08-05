@@ -1,0 +1,13 @@
+--- # my variable section
+- hosts: all
+  become: yes
+  connection: ssh
+  user: ansible
+
+  vars:
+    user: bunny
+
+  tasks:
+    - name: creating user {{user}}
+      user:
+        name: "{{user}}"   

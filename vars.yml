@@ -1,0 +1,13 @@
+--- # my vars filr
+- hosts: all
+  become: yes
+  connection: ssh
+  user: ansible
+
+  vars:
+    pkgname: httpd
+
+  tasks:
+    - name: install httpd on webservers
+      action: yum name='{{pkgname}}' state=present
+

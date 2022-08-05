@@ -1,0 +1,12 @@
+--- # creating directory
+- hosts: all
+  connection: ssh
+  user: ansible
+  name: my test playbook
+  become: yes
+    
+  tasks:
+    - name: creating a directory
+      file:
+        path: /home/ansible/direct
+        state: directory

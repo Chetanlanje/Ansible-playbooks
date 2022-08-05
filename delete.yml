@@ -1,0 +1,11 @@
+--- # delete directory
+- name: my test playbook
+  hosts: webservers
+  become: yes
+
+
+  tasks:
+    - name: deleting directory
+      file:
+        path: /home/ansible/direct
+        state: absent 

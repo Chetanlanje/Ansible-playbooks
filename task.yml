@@ -1,0 +1,9 @@
+--- #
+- hosts: webservers
+  connection: ssh
+  user: ansible
+  become: yes
+
+  tasks:
+    - name: installing webservers
+      action: yum pkg=httpd state=installed
